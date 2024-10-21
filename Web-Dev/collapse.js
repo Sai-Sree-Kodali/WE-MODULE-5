@@ -1,19 +1,18 @@
-function toggleCollapse(heading) {
-    let parent = heading.parentElement;
-    for (let child of parent.children) {
-        if (child !== heading) {
-            child.style.display === 'none' ?
-                child.style.display = 'block' : child.style.display = 'none';
-        }
-    }
-}
+// Toggle collapsible sections on header click
+document.querySelectorAll('.collapsible h2').forEach(header => {
+  header.addEventListener('click', () => {
+    const section = header.parentElement;
+    section.classList.toggle('open');
+  });
+});
 
-function makeCollapsible(heading) {
-    heading.addEventListener('click', () => toggleCollapse(heading));
-}
-
-document.addEventListener("DOMContentLoaded", () => 
-    document.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(makeCollapsible));
-
-/* if you had to write a python-style list comprehension, it would look like
- document.addEventListener("...", lambda x: [makeCollapsible(item) for item in document.querySelectorAll(...)])*/
+// Generate Table of Contents dynamically
+const tocList = document.getElementById('toc-list');
+document.querySelectorAll('section h2').forEach(header => {
+  const tocItem = document.createElement('li');
+  tocItem.textContent = header.textContent;
+  tocItem.addEventListener('click', () => {
+    header.scrollIntoView({ behavior: 'smooth' });
+  });
+  tocList.appendChild(tocItem);
+});
