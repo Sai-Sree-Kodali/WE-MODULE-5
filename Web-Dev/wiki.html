@@ -1,37 +1,68 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" lang="en">
-        <title>Aruvi</title>
-        <meta name="author" content="Aruvi">
-        <meta name="color-scheme" content="light dark">
-        <script src="prelim-toc.js" defer></script>
-        <script src="collapse.js" defer></script>
-        <link rel="stylesheet" href="wiki.css">
-    </head>
-    <body>
-        <section>
-            <h1 id="top-level-1" class="collapsible">This is a top-level heading</h1>
-            <p>This is content that follows it</p>
-        </section>
-        <section>
-            <h1 id="top-level-2" class="collapsible">This is the second top-level heading</h1>
-            <section>
-                <h2 id="subheading-2.1" class="collapsible">This is a subheading</h2>
-                <p>This is content that follows it</p>
-            </section>
-            <section>
-                <h2 id="subheading-2.2" class="collapsible">This is another subheading</h2>
-                <section>
-                    <h3 id="subheading-2.2.1" class="collapsible">This is level 3</h3>
-                </section>
-            </section>
-        </section>
-        <section>
-            <h1 id="top-level-3" class="collapsible">I've jumped back to level 1</h1>
-        </section>
-        <section>
-            <h1 class="collapsible">This one doesn't have an ID!</h1>
-        </section>
-    </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sai Sree Kodali - Profile</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Profile Header -->
+  <header>
+    <h1>Sai Sree Kodali</h1>
+    <p><strong>Software Development Engineer</strong></p>
+    <p>Email: <a href="mailto:skodali3@gitam.in">skodali3@gitam.in</a> | Phone: +91 8978504689</p>
+    <p>Location: Visakhapatnam, Andhra Pradesh, India</p>
+  </header>
+
+  <!-- Table of Contents -->
+  <div class="toc-container">
+    <h2>Table of Contents</h2>
+    <ul id="toc-list"></ul>
+  </div>
+
+  <!-- Collapsible Sections -->
+  <section class="collapsible">
+    <h2>Education</h2>
+    <div class="content">
+      <p><strong>GITAM University (September 2022 - Present)</strong><br>
+        Bachelor of Technology in Computer Science, Visakhapatnam, India<br>
+        GPA: 9.7</p>
+      <p><strong>Sri Chaitanya College (August 2020 - July 2022)</strong><br>
+        Higher Education, Visakhapatnam, India<br>
+        Percentage: 96.2%</p>
+      <p><strong>De Paul School (June 2018 - July 2020)</strong><br>
+        Secondary Education, Visakhapatnam, India<br>
+        Percentage: 95.3%</p>
+    </div>
+  </section>
+
+  <section class="collapsible">
+    <h2>Experience</h2>
+    <div class="content">
+      <p><strong>Data Management Intern, GITAM University (April 2024 – June 2024)</strong><br>
+        Visakhapatnam, India</p>
+      <ul>
+        <li>Organized alumni data from multiple sources into a prescribed format.</li>
+        <li>Scoured alumni data from various sources.</li>
+        <li>Cleaned alumni data to ensure consistency and accuracy.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="collapsible">
+    <h2>Skills</h2>
+    <div class="content">
+      <ul>
+        <li><strong>Programming Languages:</strong> Python, C, Java, HTML, CSS, LaTeX, Sphinx, Haskell</li>
+        <li><strong>Libraries/Frameworks:</strong> JavaScript, TensorFlow, MediaPipe, Keras</li>
+        <li><strong>Tools/Platforms:</strong> Git, VS Code, XAMPP</li>
+        <li><strong>Databases:</strong> SQL, MongoDB, MySQL</li>
+      </ul>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
 </html>
